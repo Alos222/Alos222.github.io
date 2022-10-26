@@ -19,8 +19,11 @@
             defaultPrivacyLevel: 'mask-user-input',
         });
 
-        window.DD_RUM &&
-            window.DD_RUM.startSessionReplayRecording();
+        window.DD_RUM && window.DD_RUM.startSessionReplayRecording();
+        window.DD_RUM && window.DD_RUM.setGlobalContextProperty('activity', {
+            hasPaid: true,
+            amount: 23.42
+        });
     </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
